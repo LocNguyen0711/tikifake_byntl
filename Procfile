@@ -1,1 +1,1 @@
-web: gunicorn tiki_ntl
+web: gunicorn tiki_ntl.wsgi
