@@ -1,0 +1,839 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="{% static 'icon/css/all.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="top-header">
+            <div class="logo">
+                <a href="{% url 'index'%}">
+                    <img src="https://salt.tikicdn.com/ts/upload/ae/f5/15/2228f38cf84d1b8451bb49e2c4537081.png"
+                        alt="logo" width="60px" height="40px" /></a>
+            </div>
+            <div class="search">
+                <form action="" method="get">
+                    <input type="text" name="search"
+                        placeholder="Tìm sản phẩm, danh mục hay thương hiệu mong muốn, ...">
+                    <button type="submit">
+                        <img class="icon-search"
+                            src="https://salt.tikicdn.com/ts/upload/ed/5e/b8/8538366274240326978318348ea8af7c.png"
+                            width="20px" height="20px"></img>
+                        <span>Tìm kiếm</span>
+                    </button>
+                </form>
+            </div>
+            <div class="header-data-user">
+                <div class="user-account">
+                    <img src="https://salt.tikicdn.com/ts/upload/67/de/1e/90e54b0a7a59948dd910ba50954c702e.png"
+                        alt="profile-icon" width="32px" height="32px">
+                    <div class="user-items">
+                        <span>Đăng Nhập / Đăng Ký</span>
+                        <span class="account-lable">
+                            <span>Tài Khoản</span>
+                            <img src="https://salt.tikicdn.com/ts/upload/d7/d4/a8/34939af2da1ceeeae9f95b7485784233.png"
+                                alt="arrowIcon" width="16px" height="16px">
+                        </span>
+                    </div>
+                </div>
+                <div class="user-cart">
+                    <div class="cart-items">
+                        <img src="https://salt.tikicdn.com/ts/upload/40/44/6c/b80ad73e5e84aeb71c08e5d8d438eaa1.png"
+                            alt="cart-icon" width="32px" height="32px">
+                        <span class="quantity">0</span>
+                    </div>
+                    <span class="cart-text">Giỏ Hàng</span>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-header">
+            <div class="logo">
+                <img src="https://salt.tikicdn.com/ts/upload/e5/1d/22/61ff572362f08ead7f34ce410a4a6f96.png"
+                    alt="free-ship" width="83px" height="12px">
+            </div>
+            <div class="items">
+                <ul>
+                    <li><a class="item 1">trái cây</a></li>
+                    <li><a class="item 2">thịt, trứng</a></li>
+                    <li><a class="item 3">rau củ quả</a></li>
+                    <li><a class="item 4">sữa, bơ, phô mai</a></li>
+                    <li><a class="item 5">hải sản</a></li>
+                    <li><a class="item 6">gạo, mì ăn liền</a></li>
+                    <li><a class="item 7">đồ uống, rượu bia</a></li>
+                    <li><a class="item 8">bánh kẹo</a></li>
+                </ul>
+            </div>
+            <div class="tiki-seller">
+                <img src="https://frontend.tikicdn.com/_desktop-next/static/img/icon-seller.svg" alt="logo-tikiseller"
+                    width="12px" height="12px">
+                <span>Bán hàng cùng Tiki</span>
+            </div>
+        </div>
+    </div>
+    <div class="slider">
+        <div class="icon icon-prev"><i class="fa fa-arrow-left"></i></div>
+        <ul class="slide-items">
+            <li><a href="#" class="item">Thịt, Rau Củ</a></li>
+            <li><a href="#" class="item">Bách Hóa</a></li>
+            <li><a href="#" class="item">Nhà Cửa</a></li>
+            <li><a href="#" class="item">Điện Tử</a></li>
+            <li><a href="#" class="item">Thiết Bị Số</a></li>
+            <li><a href="#" class="item">Điện Thoại</a></li>
+            <li><a href="#" class="item">Mẹ & Bé</a></li>
+            <li><a href="#" class="item">Làm Đẹp</a></li>
+            <li><a href="#" class="item">Gia Dụng</a></li>
+            <li><a href="#" class="item">Thời Trang Nữ</a></li>
+            <li><a href="#" class="item">Thời Trang Nam</a></li>
+            <li><a href="#" class="item">Giày Nữ</a></li>
+            <li><a href="#" class="item">Túi Nữ</a></li>
+            <li><a href="#" class="item">Giày Nam</a></li>
+            <li><a href="#" class="item">Túi Nam</a></li>
+            <li><a href="#" class="item">Balo & Vali</a></li>
+            <li><a href="#" class="item">Phụ Kiện</a></li>
+            <li><a href="#" class="item">Đồng Hồ</a></li>
+            <li><a href="#" class="item">Laptop</a></li>
+            <li><a href="#" class="item">Quốc Tế</a></li>
+            <li><a href="#" class="item">Voucher</a></li>
+            <li><a href="#" class="item">Xe</a></li>
+            <li><a href="#" class="item">Sách</a></li>
+            <li><a href="#" class="item">Thể Thao</a></li>
+            <li><a href="#" class="item">Máy Ảnh</a></li>
+        </ul>
+        <div class="icon icon-next"><i class="fa fa-arrow-right"></i></div>
+    </div>
+    <div class="container">
+        <div class="content">
+            <div class="top-content child-component">
+                <ul class="slides">
+                    <li class="icons">
+                        <div class="icon icon-prev"><i class="fa fa-arrow-left"></i></div>
+                        <div class="icon icon-next"><i class="fa fa-arrow-right"></i></div>
+                    </li>
+                    <li class="slide-item">
+                        <a href="#">
+                            <img src="https://salt.tikicdn.com/ts/banner/bc/6f/c3/bde81963830bb1a75a8f169559391825.png"
+                                alt="">
+                        </a>
+                    </li><!--
+                --><li class="slide-item">
+                        <a href="#">
+                            <img src="https://salt.tikicdn.com/ts/banner/bc/6f/c3/bde81963830bb1a75a8f169559391825.png"
+                                alt="">
+                        </a>
+                    </li><!--
+                --><li class="slide-item">
+                        <a href="#">
+                            <img src="https://salt.tikicdn.com/ts/banner/bc/6f/c3/bde81963830bb1a75a8f169559391825.png"
+                                alt="">
+                        </a>
+                    </li><!--
+                --><li class="slide-item">
+                        <a href="#">
+                            <img src="https://salt.tikicdn.com/ts/banner/bc/6f/c3/bde81963830bb1a75a8f169559391825.png"
+                                alt="">
+                        </a>
+                    </li><!--
+                --><li class="slide-item">
+                        <a href="#">
+                            <img src="https://salt.tikicdn.com/ts/banner/bc/6f/c3/bde81963830bb1a75a8f169559391825.png"
+                                alt="">
+                        </a>
+                    </li><!--
+                --><li class="slide-item">
+                        <a href="#">
+                            <img src="https://salt.tikicdn.com/ts/banner/bc/6f/c3/bde81963830bb1a75a8f169559391825.png"
+                                alt="">
+                        </a>
+                    </li><!--
+                --><li class="slide-item">
+                        <a href="#">
+                            <img src="https://salt.tikicdn.com/ts/banner/bc/6f/c3/bde81963830bb1a75a8f169559391825.png"
+                                alt="">
+                        </a>
+                    </li><!--
+                --><li class="slide-item">
+                        <a href="#">
+                            <img src="https://salt.tikicdn.com/ts/banner/bc/6f/c3/bde81963830bb1a75a8f169559391825.png"
+                                alt="">
+                        </a>
+                    </li><!--
+                --><li class="slide-item">
+                        <a href="#">
+                            <img src="https://salt.tikicdn.com/ts/banner/bc/6f/c3/bde81963830bb1a75a8f169559391825.png"
+                                alt="">
+                        </a>
+                    </li><!--
+                --><li class="slide-item">
+                        <a href="#">
+                            <img src="https://salt.tikicdn.com/ts/banner/bc/6f/c3/bde81963830bb1a75a8f169559391825.png"
+                                alt="">
+                        </a>
+                    </li><!--
+                --><li class="slide-item">
+                        <a href="#">
+                            <img src="https://salt.tikicdn.com/ts/banner/bc/6f/c3/bde81963830bb1a75a8f169559391825.png"
+                                alt="">
+                        </a>
+                    </li><!--
+                --><li class="slide-item">
+                        <a href="#">
+                            <img src="https://salt.tikicdn.com/ts/banner/bc/6f/c3/bde81963830bb1a75a8f169559391825.png"
+                                alt="">
+                        </a>
+                    </li><!--
+                --><li class="slide-item">
+                        <a href="#">
+                            <img src="https://salt.tikicdn.com/ts/banner/bc/6f/c3/bde81963830bb1a75a8f169559391825.png"
+                                alt="">
+                        </a>
+                    </li>
+                    <li class="dots">
+                        <span class ="dot0"></span>
+                        <span class ="dot1"></span>
+                        <span class ="dot2"></span>
+                        <span class ="dot3"></span>
+                        <span class ="dot4"></span>
+                        <span class ="dot5"></span>
+                        <span class ="dot6"></span>
+                        <span class ="dot7"></span>
+                        <span class ="dot8"></span>
+                        <span class ="dot9"></span>
+                        <span class ="dot10"></span>
+                        <span class ="dot11"></span>
+                        <span class ="dot12"></span>
+                    </li>
+                </ul>
+                <div class="event">
+                    <img src="https://salt.tikicdn.com/cache/w400/ts/banner/8e/3f/be/5bddfdb2225f0f5ad2d8ab3b85d2fd2c.png.webp"
+                        alt="" width="408px" height="274px">
+                </div>
+            </div>
+            <div class="content-deal-and-reward child-component">
+                <div class="content-deal">
+                    <div class="header">
+                        <div class="header-left">
+                            <div class="title">
+                                <img src="https://frontend.tikicdn.com/_desktop-next/static/img/giasoc.svg" alt=""
+                                    width="89px" height="28px">
+                                <img src="https://frontend.tikicdn.com/_desktop-next/static/img/dealFlashIcon.svg"
+                                    alt="" width="21px" height="28px">
+                                <img src="https://frontend.tikicdn.com/_desktop-next/static/img/homnay.svg" alt=""
+                                    width="113" height="28px">
+                            </div>
+                            <div class="time-countdown">
+                                <div class="time-countdown-item">
+                                    <div class="time-countdown-item-number hour">00</div>
+                                </div>
+                                <span>:</span>
+                                <div class="time-countdown-item">
+                                    <div class="time-countdown-item-number minute">00</div>
+                                </div>
+                                <span>:</span>
+                                <div class="time-countdown-item">
+                                    <div class="time-countdown-item-number second">00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-right">
+                            <div class="more"><a href="#" class="xemthem">Xem thêm</a></div>
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="icons">
+                            <div class="icon icon-prev"><i class="fa fa-arrow-left"></i></div>
+                            <div class="icon icon-next"><i class="fa fa-arrow-right"></i></div>
+                        </div>
+                        <div class="deal-slider">
+                            <div class="slide-item">
+                                <picture class="img">
+                                    <img src="https://salt.tikicdn.com/cache/280x280/media/catalog/producttmp/95/69/8f/b823387c9ba8759ac35033e17fc5f135.jpg"
+                                        alt="img-product" width="100%" height="100%">
+                                    <div class="event">
+                                        <img src="https://salt.tikicdn.com/ts/upload/dc/0d/49/ef9dc5d8164bd62b011e54276502b342.png"
+                                            alt="free-ship" width="91px" height="16px">
+                                    </div>
+                                </picture>
+                                <div class="deals-price">
+                                    <div class="price">
+                                        <span>100.000đ</span>
+                                    </div>
+                                    <div class="sale-off">
+                                        <span>-20%</span>
+                                    </div>
+                                </div>
+                                <div class="status">
+                                    <span><span class="just-opened"></span> Vừa mở bán</span>
+                                </div>
+                            </div>
+                            <div class="slide-item">
+                                <picture class="img">
+                                    <img src="https://salt.tikicdn.com/cache/280x280/media/catalog/producttmp/95/69/8f/b823387c9ba8759ac35033e17fc5f135.jpg"
+                                        alt="img-product" width="100%" height="100%">
+                                    <div class="event">
+                                        <img src="https://salt.tikicdn.com/ts/upload/dc/0d/49/ef9dc5d8164bd62b011e54276502b342.png"
+                                            alt="free-ship" width="91px" height="16px">
+                                    </div>
+                                </picture>
+                                <div class="deals-price">
+                                    <div class="price">
+                                        <span>100.000đ</span>
+                                    </div>
+                                    <div class="sale-off">
+                                        <span>-20%</span>
+                                    </div>
+                                </div>
+                                <div class="status">
+                                    <span><span class="just-opened"></span> Vừa mở bán</span>
+                                </div>
+                            </div>
+                            <div class="slide-item">
+                                <picture class="img">
+                                    <img src="https://salt.tikicdn.com/cache/280x280/media/catalog/producttmp/95/69/8f/b823387c9ba8759ac35033e17fc5f135.jpg"
+                                        alt="img-product" width="100%" height="100%">
+                                    <div class="event">
+                                        <img src="https://salt.tikicdn.com/ts/upload/dc/0d/49/ef9dc5d8164bd62b011e54276502b342.png"
+                                            alt="free-ship" width="91px" height="16px">
+                                    </div>
+                                </picture>
+                                <div class="deals-price">
+                                    <div class="price">
+                                        <span>100.000đ</span>
+                                    </div>
+                                    <div class="sale-off">
+                                        <span>-20%</span>
+                                    </div>
+                                </div>
+                                <div class="status">
+                                    <span><span class="just-opened"></span> Vừa mở bán</span>
+                                </div>
+                            </div>
+                            <div class="slide-item">
+                                <picture class="img">
+                                    <img src="https://salt.tikicdn.com/cache/280x280/media/catalog/producttmp/95/69/8f/b823387c9ba8759ac35033e17fc5f135.jpg"
+                                        alt="img-product" width="100%" height="100%">
+                                    <div class="event">
+                                        <img src="https://salt.tikicdn.com/ts/upload/dc/0d/49/ef9dc5d8164bd62b011e54276502b342.png"
+                                            alt="free-ship" width="91px" height="16px">
+                                    </div>
+                                </picture>
+                                <div class="deals-price">
+                                    <div class="price">
+                                        <span>100.000đ</span>
+                                    </div>
+                                    <div class="sale-off">
+                                        <span>-20%</span>
+                                    </div>
+                                </div>
+                                <div class="status">
+                                    <span><span class="just-opened"></span> Vừa mở bán</span>
+                                </div>
+                            </div>
+                            <div class="slide-item">
+                                <picture class="img">
+                                    <img src="https://salt.tikicdn.com/cache/280x280/media/catalog/producttmp/95/69/8f/b823387c9ba8759ac35033e17fc5f135.jpg"
+                                        alt="img-product" width="100%" height="100%">
+                                    <div class="event">
+                                        <img src="https://salt.tikicdn.com/ts/upload/dc/0d/49/ef9dc5d8164bd62b011e54276502b342.png"
+                                            alt="free-ship" width="91px" height="16px">
+                                    </div>
+                                </picture>
+                                <div class="deals-price">
+                                    <div class="price">
+                                        <span>100.000đ</span>
+                                    </div>
+                                    <div class="sale-off">
+                                        <span>-20%</span>
+                                    </div>
+                                </div>
+                                <div class="status">
+                                    <span><span class="just-opened"></span> Vừa mở bán</span>
+                                </div>
+                            </div>
+                            <div class="slide-item">
+                                <picture class="img">
+                                    <img src="https://salt.tikicdn.com/cache/280x280/media/catalog/producttmp/95/69/8f/b823387c9ba8759ac35033e17fc5f135.jpg"
+                                        alt="img-product" width="100%" height="100%">
+                                    <div class="event">
+                                        <img src="https://salt.tikicdn.com/ts/upload/dc/0d/49/ef9dc5d8164bd62b011e54276502b342.png"
+                                            alt="free-ship" width="91px" height="16px">
+                                    </div>
+                                </picture>
+                                <div class="deals-price">
+                                    <div class="price">
+                                        <span>100.000đ</span>
+                                    </div>
+                                    <div class="sale-off">
+                                        <span>-20%</span>
+                                    </div>
+                                </div>
+                                <div class="status">
+                                    <span><span class="just-opened"></span> Vừa mở bán</span>
+                                </div>
+                            </div>
+                            <div class="slide-item">
+                                <picture class="img">
+                                    <img src="https://salt.tikicdn.com/cache/280x280/media/catalog/producttmp/95/69/8f/b823387c9ba8759ac35033e17fc5f135.jpg"
+                                        alt="img-product" width="100%" height="100%">
+                                    <div class="event">
+                                        <img src="https://salt.tikicdn.com/ts/upload/dc/0d/49/ef9dc5d8164bd62b011e54276502b342.png"
+                                            alt="free-ship" width="91px" height="16px">
+                                    </div>
+                                </picture>
+                                <div class="deals-price">
+                                    <div class="price">
+                                        <span>100.000đ</span>
+                                    </div>
+                                    <div class="sale-off">
+                                        <span>-20%</span>
+                                    </div>
+                                </div>
+                                <div class="status">
+                                    <span><span class="just-opened"></span> Vừa mở bán</span>
+                                </div>
+                            </div>
+                            <div class="slide-item">
+                                <picture class="img">
+                                    <img src="https://salt.tikicdn.com/cache/280x280/media/catalog/producttmp/95/69/8f/b823387c9ba8759ac35033e17fc5f135.jpg"
+                                        alt="img-product" width="100%" height="100%">
+                                    <div class="event">
+                                        <img src="https://salt.tikicdn.com/ts/upload/dc/0d/49/ef9dc5d8164bd62b011e54276502b342.png"
+                                            alt="free-ship" width="91px" height="16px">
+                                    </div>
+                                </picture>
+                                <div class="deals-price">
+                                    <div class="price">
+                                        <span>100.000đ</span>
+                                    </div>
+                                    <div class="sale-off">
+                                        <span>-20%</span>
+                                    </div>
+                                </div>
+                                <div class="status">
+                                    <span><span class="just-opened"></span> Vừa mở bán</span>
+                                </div>
+                            </div>
+                            <div class="slide-item">
+                                <picture class="img">
+                                    <img src="https://salt.tikicdn.com/cache/280x280/media/catalog/producttmp/95/69/8f/b823387c9ba8759ac35033e17fc5f135.jpg"
+                                        alt="img-product" width="100%" height="100%">
+                                    <div class="event">
+                                        <img src="https://salt.tikicdn.com/ts/upload/dc/0d/49/ef9dc5d8164bd62b011e54276502b342.png"
+                                            alt="free-ship" width="91px" height="16px">
+                                    </div>
+                                </picture>
+                                <div class="deals-price">
+                                    <div class="price">
+                                        <span>100.000đ</span>
+                                    </div>
+                                    <div class="sale-off">
+                                        <span>-20%</span>
+                                    </div>
+                                </div>
+                                <div class="status">
+                                    <span><span class="just-opened"></span> Vừa mở bán</span>
+                                </div>
+                            </div>
+                            <div class="slide-item">
+                                <picture class="img">
+                                    <img src="https://salt.tikicdn.com/cache/280x280/media/catalog/producttmp/95/69/8f/b823387c9ba8759ac35033e17fc5f135.jpg"
+                                        alt="img-product" width="100%" height="100%">
+                                    <div class="event">
+                                        <img src="https://salt.tikicdn.com/ts/upload/dc/0d/49/ef9dc5d8164bd62b011e54276502b342.png"
+                                            alt="free-ship" width="91px" height="16px">
+                                    </div>
+                                </picture>
+                                <div class="deals-price">
+                                    <div class="price">
+                                        <span>100.000đ</span>
+                                    </div>
+                                    <div class="sale-off">
+                                        <span>-20%</span>
+                                    </div>
+                                </div>
+                                <div class="status">
+                                    <span><span class="just-opened"></span> Vừa mở bán</span>
+                                </div>
+                            </div>
+                            <div class="slide-item">
+                                <picture class="img">
+                                    <img src="https://salt.tikicdn.com/cache/280x280/media/catalog/producttmp/95/69/8f/b823387c9ba8759ac35033e17fc5f135.jpg"
+                                        alt="img-product" width="100%" height="100%">
+                                    <div class="event">
+                                        <img src="https://salt.tikicdn.com/ts/upload/dc/0d/49/ef9dc5d8164bd62b011e54276502b342.png"
+                                            alt="free-ship" width="91px" height="16px">
+                                    </div>
+                                </picture>
+                                <div class="deals-price">
+                                    <div class="price">
+                                        <span>100.000đ</span>
+                                    </div>
+                                    <div class="sale-off">
+                                        <span>-20%</span>
+                                    </div>
+                                </div>
+                                <div class="status">
+                                    <span><span class="just-opened"></span> Vừa mở bán</span>
+                                </div>
+                            </div>
+                            <div class="slide-item">
+                                <picture class="img">
+                                    <img src="https://salt.tikicdn.com/cache/280x280/media/catalog/producttmp/95/69/8f/b823387c9ba8759ac35033e17fc5f135.jpg"
+                                        alt="img-product" width="100%" height="100%">
+                                    <div class="event">
+                                        <img src="https://salt.tikicdn.com/ts/upload/dc/0d/49/ef9dc5d8164bd62b011e54276502b342.png"
+                                            alt="free-ship" width="91px" height="16px">
+                                    </div>
+                                </picture>
+                                <div class="deals-price">
+                                    <div class="price">
+                                        <span>100.000đ</span>
+                                    </div>
+                                    <div class="sale-off">
+                                        <span>-20%</span>
+                                    </div>
+                                </div>
+                                <div class="status">
+                                    <span><span class="just-opened"></span> Vừa mở bán</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-reward">
+                    <div class="reward-slider">
+                        <div class="slide-item">
+                            <picture>
+                                <img src="https://salt.tikicdn.com/ts/upload/ee/f1/10/bc58a1bcbf5ff92206bff7a3c56ab89b.png"
+                                    alt="img-product" width="100%" height="100%">
+                            </picture>
+                            <video
+                                poster="https://salt.tikicdn.com/ts/upload/bb/3b/98/404a74a9e8e0d6ba8fedf9e454159d9d.png">
+                                <source
+                                    src="https://sand.tikicdn.com/ts/asavideo/19/0c/48/fdce6602418b5bd48113e4e7a7f10335.mp4"
+                                    type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="dots">
+                            <span class="dot one"></span>
+                            <span class="dot two"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-brand child-component">
+                <div class="left">
+                    <picture>
+                        <img src="https://salt.tikicdn.com/cache/w200/ts/banner/83/23/20/578f44d8ca98e9babb858ac65bb7f770.png.webp"
+                            alt="">
+                    </picture>
+                </div>
+                <div class="middle">
+                    <picture>
+                        <img src="https://salt.tikicdn.com/cache/w1080/ts/banner/c5/8b/c5/957bc8cbc3cd7c691481b8dcb8f4ff77.png.webp"
+                            alt="">
+                    </picture>
+                </div>
+                <div class="right">
+                    <picture>
+                        <img src="https://salt.tikicdn.com/cache/w200/ts/banner/32/e8/22/0e5d44d8fc8c50263a7cc9a48ba9c21e.png.webp"
+                            alt="">
+                    </picture>
+                </div>
+            </div>
+            <div class="tab-container child-component">
+                <div class="tab-item">
+                    <img src="https://salt.tikicdn.com/ts/upload/7b/fc/54/777d24de8eff003bda7a8d5f4294f9a8.gif" alt="">
+                    <a href="#" class="title">Mua sắm có lời</a>
+                </div>
+                <div class="tab-item">
+                    <img src="https://salt.tikicdn.com/cache/w100/ts/upload/f4/cc/13/eeb7c8155cdeca4c5db9dff1a33969bd.png.webp"
+                        alt="">
+                    <a href="#" class="title">Siêu sale 8.8</a>
+                </div>
+                <div class="tab-item">
+                    <img src="https://salt.tikicdn.com/cache/w100/ts/upload/68/9c/2f/6fc82a9a9713a2c2b1968e9760879f6e.png.webp"
+                        alt="">
+                    <a href="#" class="title">Đi chợ siêu tốc</a>
+                </div>
+                <div class="tab-item">
+                    <img src="https://salt.tikicdn.com/cache/w100/ts/upload/73/e0/7d/af993bdbf150763f3352ffa79e6a7117.png.webp"
+                        alt="">
+                    <a href="#" class="title">Đóng tiền, nạp thẻ</a>
+                </div>
+                <div class="tab-item">
+                    <img src="https://salt.tikicdn.com/cache/w100/ts/upload/ff/20/4a/0a7c547424f2d976b6012179ed745819.png.webp"
+                        alt="">
+                    <a href="#" class="title">Mua bán ASA/XU</a>
+                </div>
+                <div class="tab-item">
+                    <img src="https://salt.tikicdn.com/cache/w100/ts/upload/73/50/e1/83afc85db37c472de60ebef6eceb41a7.png.webp"
+                        alt="">
+                    <a href="#" class="title">Mã giảm giá</a>
+                </div>
+                <div class="tab-item">
+                    <img src="https://salt.tikicdn.com/cache/w100/ts/upload/ef/ae/82/f40611ad6dfc68a0d26451582a65102f.png.webp"
+                        alt="">
+                    <a href="#" class="title">Bảo hiểm Tiki360</a>
+                </div>
+                <div class="tab-item">
+                    <img src="https://salt.tikicdn.com/cache/w100/ts/upload/99/29/ff/cea178635fd5a24ad01617cae66c065c.png.webp"
+                        alt="">
+                    <a href="#" class="title">Giảm đến 50%</a>
+                </div>
+                <div class="tab-item">
+                    <img src="https://salt.tikicdn.com/cache/w100/ts/upload/52/50/73/0788d5207ec8b82e05859dfe953a4327.png.webp"
+                        alt="">
+                    <a href="#" class="title">Hoàn tiền 15%</a>
+                </div>
+                <div class="tab-item">
+                    <img src="https://salt.tikicdn.com/ts/upload/4a/b2/c5/b388ee0e511889c83fab1217608fe82f.png" alt="">
+                    <a href="#" class="title">Ưu đãi thanh toán</a>
+                </div>
+            </div>
+            <div class="banner-container child-component">
+                <div class="banner-item">
+                    <picture>
+                        <img src="https://salt.tikicdn.com/ts/banner/74/ca/7f/39ffdf8ee3b2ff2cbaace0dc1e667c37.png"
+                            alt="">
+                    </picture>
+                </div>
+                <div class="banner-item">
+                    <picture>
+                        <img src="https://salt.tikicdn.com/ts/banner/d3/eb/8a/24241077daf7460d00656a7f70d99c41.png"
+                            alt="">
+                    </picture>
+                </div>
+                <div class="banner-item">
+                    <picture>
+                        <img src="https://salt.tikicdn.com/ts/banner/8b/57/4e/0a0cc60bc1425091cb0249154d62659c.png"
+                            alt="">
+                    </picture>
+                </div>
+                <div class="banner-item">
+                    <picture>
+                        <img src="https://salt.tikicdn.com/ts/banner/d6/67/6d/f8feca17fb7cc20dfa31eee7665329aa.png"
+                            alt="">
+                    </picture>
+                </div>
+            </div>
+            <div class="authentication-container child-component">
+                <div class="authentic-brand">
+                <div class="header">
+                    <img src="https://salt.tikicdn.com/ts/upload/33/0f/67/de89fab36546a63a8f3a8b7d038bff81.png"
+                        width="24px" height="24px" alt="">
+                    <span>Thương Hiệu Chính Hãng</span>
+                </div>
+                <div class="container">
+                    <div class="banner">
+                        <div class="banner-slider">
+                            <div class="arrow">
+                                <div class="icon icon-prev"><i class="fa fa-arrow-left"></i></div>
+                                <div class="icon icon-next"><i class="fa fa-arrow-right"></i></div>
+                            </div>
+                            <a class="slide-item" href=""><img
+                                    src="https://salt.tikicdn.com/ts/banner/b7/b3/e8/c076fbaf4ee9c1fc48a72b1d9a5f729c.png"
+                                    alt=""></a>
+                            <a class="slide-item" href=""><img
+                                    src="https://salt.tikicdn.com/ts/banner/b7/b3/e8/c076fbaf4ee9c1fc48a72b1d9a5f729c.png"
+                                    alt=""></a>
+                            <a class="slide-item" href=""><img
+                                    src="https://salt.tikicdn.com/ts/banner/b7/b3/e8/c076fbaf4ee9c1fc48a72b1d9a5f729c.png"
+                                    alt=""></a>
+                            <a class="slide-item" href=""><img
+                                    src="https://salt.tikicdn.com/ts/banner/b7/b3/e8/c076fbaf4ee9c1fc48a72b1d9a5f729c.png"
+                                    alt=""></a>
+                            <a class="slide-item" href=""><img
+                                    src="https://salt.tikicdn.com/ts/banner/b7/b3/e8/c076fbaf4ee9c1fc48a72b1d9a5f729c.png"
+                                    alt=""></a>
+                            <a class="slide-item" href=""><img
+                                    src="https://salt.tikicdn.com/ts/banner/b7/b3/e8/c076fbaf4ee9c1fc48a72b1d9a5f729c.png"
+                                    alt=""></a>
+                            <a class="slide-item" href=""><img
+                                    src="https://salt.tikicdn.com/ts/banner/b7/b3/e8/c076fbaf4ee9c1fc48a72b1d9a5f729c.png"
+                                    alt=""></a>
+                            <a class="slide-item" href=""><img
+                                    src="https://salt.tikicdn.com/ts/banner/b7/b3/e8/c076fbaf4ee9c1fc48a72b1d9a5f729c.png"
+                                    alt=""></a>
+                            <a class="slide-item" href=""><img
+                                    src="https://salt.tikicdn.com/ts/banner/b7/b3/e8/c076fbaf4ee9c1fc48a72b1d9a5f729c.png"
+                                    alt=""></a>
+                            <a class="slide-item" href=""><img
+                                    src="https://salt.tikicdn.com/ts/banner/b7/b3/e8/c076fbaf4ee9c1fc48a72b1d9a5f729c.png"
+                                    alt=""></a>
+                            <a class="slide-item" href=""><img
+                                    src="https://salt.tikicdn.com/ts/banner/b7/b3/e8/c076fbaf4ee9c1fc48a72b1d9a5f729c.png"
+                                    alt=""></a>
+                            <a class="slide-item" href=""><img
+                                    src="https://salt.tikicdn.com/ts/banner/b7/b3/e8/c076fbaf4ee9c1fc48a72b1d9a5f729c.png"
+                                    alt=""></a>
+                            <a class="slide-item" href=""><img
+                                    src="https://salt.tikicdn.com/ts/banner/b7/b3/e8/c076fbaf4ee9c1fc48a72b1d9a5f729c.png"
+                                    alt=""></a>
+                            <a class="slide-item" href=""><img
+                                    src="https://salt.tikicdn.com/ts/banner/b7/b3/e8/c076fbaf4ee9c1fc48a72b1d9a5f729c.png"
+                                    alt=""></a>
+                        </div>
+                        <div class="dots">
+                            <span class="dot0"></span>
+                            <span class="dot2"></span>
+                            <span class="dot4"></span>
+                            <span class="dot6"></span>
+                            <span class="dot8"></span>
+                            <span class="dot10"></span>
+                            <span class="dot12"></span>
+                        </div>
+                    </div>
+                    <div class="brands-card">
+                        <div class="slide-card">
+                            <div class="card-item">
+                                <a href="" class="items">
+                                    <picture>
+                                        <img src="https://salt.tikicdn.com/ts/banner/4b/5b/0e/e67c5399f3c45a8f7bf41cfa7faed781.png" alt="">
+                                    </picture>
+                                    <span class="title">Galaxy Z Mới</span>
+                                </a>
+                            </div>
+                            <div class="card-item">
+                                <a href="" class="items">
+                                    <picture>
+                                        <img src="https://salt.tikicdn.com/ts/banner/4b/5b/0e/e67c5399f3c45a8f7bf41cfa7faed781.png" alt="">
+                                    </picture>
+                                    <span class="title">Galaxy Z Mới</span>
+                                </a>
+                            </div>
+                            <div class="card-item">
+                                <a href="" class="items">
+                                    <picture>
+                                        <img src="https://salt.tikicdn.com/ts/banner/4b/5b/0e/e67c5399f3c45a8f7bf41cfa7faed781.png" alt="">
+                                    </picture>
+                                    <span class="title">Galaxy Z Mới</span>
+                                </a>
+                            </div>
+                            <div class="card-item">
+                                <a href="" class="items">
+                                    <picture>
+                                        <img src="https://salt.tikicdn.com/ts/banner/4b/5b/0e/e67c5399f3c45a8f7bf41cfa7faed781.png" alt="">
+                                    </picture>
+                                    <span class="title">Galaxy Z Mới</span>
+                                </a>
+                            </div>
+                            <div class="card-item">
+                                <a href="" class="items">
+                                    <picture>
+                                        <img src="https://salt.tikicdn.com/ts/banner/4b/5b/0e/e67c5399f3c45a8f7bf41cfa7faed781.png" alt="">
+                                    </picture>
+                                    <span class="title">Galaxy Z Mới</span>
+                                </a>
+                            </div>
+                            <div class="card-item">
+                                <a href="" class="items">
+                                    <picture>
+                                        <img src="https://salt.tikicdn.com/ts/banner/4b/5b/0e/e67c5399f3c45a8f7bf41cfa7faed781.png" alt="">
+                                    </picture>
+                                    <span class="title">Galaxy Z Mới</span>
+                                </a>
+                            </div>
+                            <div class="card-item">
+                                <a href="" class="items">
+                                    <picture>
+                                        <img src="https://salt.tikicdn.com/ts/banner/4b/5b/0e/e67c5399f3c45a8f7bf41cfa7faed781.png" alt="">
+                                    </picture>
+                                    <span class="title">Galaxy Z Mới</span>
+                                </a>
+                            </div>
+                            <div class="card-item">
+                                <a href="" class="items">
+                                    <picture>
+                                        <img src="https://salt.tikicdn.com/ts/banner/4b/5b/0e/e67c5399f3c45a8f7bf41cfa7faed781.png" alt="">
+                                    </picture>
+                                    <span class="title">Galaxy Z Mới</span>
+                                </a>
+                            </div>
+                            <div class="card-item">
+                                <a href="" class="items">
+                                    <picture>
+                                        <img src="https://salt.tikicdn.com/ts/banner/4b/5b/0e/e67c5399f3c45a8f7bf41cfa7faed781.png" alt="">
+                                    </picture>
+                                    <span class="title">Galaxy Z Mới</span>
+                                </a>
+                            </div>
+                            <div class="card-item">
+                                <a href="" class="items">
+                                    <picture>
+                                        <img src="https://salt.tikicdn.com/ts/banner/4b/5b/0e/e67c5399f3c45a8f7bf41cfa7faed781.png" alt="">
+                                    </picture>
+                                    <span class="title">Galaxy Z Mới</span>
+                                </a>
+                            </div>
+                            <div class="card-item">
+                                <a href="" class="items">
+                                    <picture>
+                                        <img src="https://salt.tikicdn.com/ts/banner/4b/5b/0e/e67c5399f3c45a8f7bf41cfa7faed781.png" alt="">
+                                    </picture>
+                                    <span class="title">Galaxy Z Mới</span>
+                                </a>
+                            </div>
+                            <div class="card-item">
+                                <a href="" class="items">
+                                    <picture>
+                                        <img src="https://salt.tikicdn.com/ts/banner/4b/5b/0e/e67c5399f3c45a8f7bf41cfa7faed781.png" alt="">
+                                    </picture>
+                                    <span class="title">Galaxy Z Mới</span>
+                                </a>
+                            </div>
+                            <div class="card-item">
+                                <a href="" class="items">
+                                    <picture>
+                                        <img src="https://salt.tikicdn.com/ts/banner/4b/5b/0e/e67c5399f3c45a8f7bf41cfa7faed781.png" alt="">
+                                    </picture>
+                                    <span class="title">Galaxy Z Mới</span>
+                                </a>
+                            </div>
+                            <div class="card-item">
+                                <a href="" class="items">
+                                    <picture>
+                                        <img src="https://salt.tikicdn.com/ts/banner/4b/5b/0e/e67c5399f3c45a8f7bf41cfa7faed781.png" alt="">
+                                    </picture>
+                                    <span class="title">Galaxy Z Mới</span>
+                                </a>
+                            </div>
+                            <div class="card-item">
+                                <a href="" class="items">
+                                    <picture>
+                                        <img src="https://salt.tikicdn.com/ts/banner/4b/5b/0e/e67c5399f3c45a8f7bf41cfa7faed781.png" alt="">
+                                    </picture>
+                                    <span class="title">Galaxy Z Mới</span>
+                                </a>
+                            </div>
+                            <div class="card-item">
+                                <a href="" class="items">
+                                    <picture>
+                                        <img src="https://salt.tikicdn.com/ts/banner/4b/5b/0e/e67c5399f3c45a8f7bf41cfa7faed781.png" alt="">
+                                    </picture>
+                                    <span class="title">Galaxy Z Mới</span>
+                                </a>
+                            </div>
+                            <div class="icons">
+                                <div class="icon icon-prev"><i class="fa fa-arrow-left"></i></div>
+                                <div class="icon icon-next"><i class="fa fa-arrow-right"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+
+    </div>
+</body>
+
+</html>
