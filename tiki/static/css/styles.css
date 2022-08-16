@@ -1077,12 +1077,14 @@ body>.header {
 .footer {
     display: flex;
     width: 100%;
+    margin-top: 16px;
+    padding: 16px 0;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: #fff;
 }
-.footer div {
+.footer > div {
     width: 1270px;
     padding-left: 15px;
     padding-right: 15px;
@@ -1106,7 +1108,7 @@ body>.header {
     display: flex;
     align-items: flex-start;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .footer .infomation .icon {
     margin-right: 8px;
@@ -1137,7 +1139,11 @@ body>.header {
     text-decoration: underline;
 }
 .footer .address {
-    padding: 16px 0px;
+    display: flex;
+    padding-top: 16px;
+    align-items: center;
+    padding-bottom: 16px;
+    justify-content: center;
 }
 /* End Container */
 /* Animations */
