@@ -86,16 +86,19 @@ const slideShow = (btnControl, dotItems, root, children, index, slideWidth, slid
 }
 // Banner content script
 let countSlide1 = 0;
+const getWidth1 = () => {
+    return TopContent.querySelector('img').offsetWidth;
+}
 const dotItems1 = TopContent.querySelector('.dots')
 SlidesBannerContent.querySelector('.icon.icon-next').addEventListener('click', () => {
-    countSlide1 = slideShow('next', dotItems1, SlidesBannerContent, '.slide-item', countSlide1, 824, SlidesBannerContent.childElementCount - 3, 1)
+    countSlide1 = slideShow('next', dotItems1, SlidesBannerContent, '.slide-item', countSlide1, getWidth1(), SlidesBannerContent.childElementCount - 3, 1)
 })
 SlidesBannerContent.querySelector('.icon.icon-prev').addEventListener('click', () => {
-    countSlide1 = slideShow('prev', dotItems1, SlidesBannerContent, '.slide-item', countSlide1, 824, SlidesBannerContent.childElementCount - 3, 1)
+    countSlide1 = slideShow('prev', dotItems1, SlidesBannerContent, '.slide-item', countSlide1, getWidth1(), SlidesBannerContent.childElementCount - 3, 1)
 })
 dotItems1.querySelectorAll('span').forEach(item => {
     item.addEventListener('click', () => {
-        countSlide1 = slideShow('dot', dotItems1, SlidesBannerContent, '.slide-item', countSlide1, 824, SlidesBannerContent.childElementCount - 3, 1, item)
+        countSlide1 = slideShow('dot', dotItems1, SlidesBannerContent, '.slide-item', countSlide1, getWidth1(), SlidesBannerContent.childElementCount - 3, 1, item)
     })
 })
 // End banner content script
@@ -124,16 +127,19 @@ contentDeal.querySelector('.icon.icon-prev').addEventListener('click', () => {
 })
 
 let countSlide3 = 0;
+const getWidth2 = () => {
+    return contentRewardSlides.querySelector('img').offsetWidth;
+}
 contentReward.querySelector('.dot.one').addEventListener('click', () => {
     if (countSlide3 === 1) {
-        countSlide3 = slideShow('prev', 'none', contentRewardSlides, '.slide-item', countSlide3, 488, contentRewardSlides.childElementCount - 1, 1)
+        countSlide3 = slideShow('prev', 'none', contentRewardSlides, '.slide-item', countSlide3, getWidth2(), contentRewardSlides.childElementCount - 1, 1)
         contentReward.querySelector('.dot.one').style.backgroundColor = "#ab9bfa"
         contentReward.querySelector('.dot.two').style.backgroundColor = "#402da1"
     }
 })
 contentReward.querySelector('.dot.two').addEventListener('click', () => {
     if (countSlide3 === 0) {
-        countSlide3 = slideShow('next', 'none', contentRewardSlides, '.slide-item', countSlide3, 488, contentRewardSlides.childElementCount - 1, 1)
+        countSlide3 = slideShow('next', 'none', contentRewardSlides, '.slide-item', countSlide3, getWidth2(), contentRewardSlides.childElementCount - 1, 1)
         contentReward.querySelector('.dot.two').style.backgroundColor = "#ab9bfa"
         contentReward.querySelector('.dot.one').style.backgroundColor = "#402da1"
     }
@@ -143,10 +149,10 @@ let countSlide4 = 0;
 const authenticBrand = document.querySelector('.authentic-brand')
 const bannerSlider = authenticBrand.querySelector('.banner-slider')
 const dotItems2 = authenticBrand.querySelector('.dots')
-bannerSlider.querySelector('.icon.icon-next').addEventListener('click', () => {
+bannerSlider.parentElement.querySelector('.icon.icon-next').addEventListener('click', () => {
     countSlide4 = slideShow('next', dotItems2, bannerSlider, '.slide-item', countSlide4, 612, bannerSlider.childElementCount - 3, 2)
 })
-bannerSlider.querySelector('.icon.icon-prev').addEventListener('click', () => {
+bannerSlider.parentElement.querySelector('.icon.icon-prev').addEventListener('click', () => {
     countSlide4 = slideShow('prev', dotItems2, bannerSlider, '.slide-item', countSlide4, 612, bannerSlider.childElementCount - 3, 2)
 })
 dotItems2.querySelectorAll('span').forEach((item) => {
@@ -182,6 +188,20 @@ brandsCard.querySelector('.icon.icon-prev').addEventListener('click', () => {
         brandsCard.querySelector('.icon.icon-next').style.visibility = 'visible'
         document.documentElement.style.setProperty('--visibleBefore-visibility', 'hidden')
         document.documentElement.style.setProperty('--visibleAfter-visibility', 'visible')
+    }
+})
+const moreProductItems = ['.more-item-1']
+const btnMoreProduct = document.querySelector('.recommend-today').querySelector('.more-products-link')
+countMoreProduct = 0;
+btnMoreProduct.addEventListener('click', () => {
+    countMoreProduct += 1;
+    if (moreProductItems[countMoreProduct-1]) {
+        document.querySelector('.recommend-today').querySelectorAll(moreProductItems[countMoreProduct-1]).forEach((item) => {
+            item.style.display = 'flex'
+        })
+    }
+    else {
+        alert('Đã hết sản phẩm')
     }
 })
 // End deal content script
