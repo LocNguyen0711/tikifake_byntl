@@ -46,6 +46,7 @@ body>.header {
     position: relative;
     display: flex;
     width: 100%;
+    overflow: hidden;
     height: 100px;
     z-index: 100;
     align-items: center;
@@ -326,6 +327,7 @@ body>.header {
 
 .content-deal-and-reward {
     height: 274px;
+    overflow: hidden;
 }
 
 .content-deal {
@@ -564,6 +566,11 @@ body>.header {
 
 .container .content-brand {
     height: 160px;
+    overflow: hidden;
+}
+
+.content .content-brand .box {
+    display: none;
 }
 
 .content .content-brand .left,
@@ -635,6 +642,7 @@ body>.header {
 .authentication-container {
     justify-content: center;
     background-color: #fff;
+    overflow: hidden;
 }
 
 .authentic-brand {
@@ -960,6 +968,7 @@ body>.header {
     height: 100%;
     display: flex;
     flex-wrap: wrap;
+    overflow: hidden;
     padding: 0px 0px 16px;
     background-color: #fff;
 }
@@ -1067,13 +1076,16 @@ body>.header {
     padding: 5px 50px;
     border: 1px solid rgb(26, 148, 255);
 }
+
 .recommend-today .more-products span:hover {
     background-color: rgb(9, 75, 147);
     color: #fff;
 }
+
 .recommend-today .product-item.more-item-1 {
     display: none;
 }
+
 .footer {
     display: flex;
     width: 100%;
@@ -1081,42 +1093,49 @@ body>.header {
     padding: 16px 0;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
     justify-content: center;
     background-color: #fff;
 }
-.footer > div {
+
+.footer>div {
     width: 1270px;
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
 }
+
 .footer .payment-methods svg {
     width: 32px;
     height: 32px;
 }
-.footer .payment-methods .icon {
 
-}
+.footer .payment-methods .icon {}
+
 .fHiR {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
     flex-direction: row;
 }
+
 .footer .infomation {
     display: flex;
     align-items: flex-start;
     flex-direction: row;
     justify-content: space-between;
 }
+
 .footer .infomation .icon {
     margin-right: 8px;
     margin-bottom: 8px;
 }
-.footer .infomation > div {
+
+.footer .infomation>div {
     width: 226px;
 }
+
 .fHt {
     font-size: 16px;
     line-height: 24px;
@@ -1124,20 +1143,24 @@ body>.header {
     color: rbg(56, 56, 61);
     margin-bottom: 12px;
 }
+
 .fHc {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     justify-content: center;
 }
+
 .flstItem {
     font-size: 10px;
     line-height: 16px;
     margin-bottom: 8px;
 }
+
 .flstItem:hover {
     text-decoration: underline;
 }
+
 .footer .address {
     display: flex;
     padding-top: 16px;
@@ -1145,49 +1168,176 @@ body>.header {
     padding-bottom: 16px;
     justify-content: center;
 }
+
 /* End Container */
 /* Animations */
 
 /* Responsive */
-@media screen and (max-width: 1270px) {
+@media screen and (max-width: 1240px) {
+
+    body>.header .top-header .user-account .user-items,
+    body>.header .top-header .cart-text,
+    body>.header .top-header .user-cart .quantity,
+    body>.header .bottom-header .tiki-seller,
+    body>.header .bottom-header .items {
+        display: none;
+    }
 
     body>.header {
-        flex-direction: row;
-        padding: 8px 12px 0;
+        height: 102px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row-reverse;
     }
 
-    body>.header .top-header {
-        width: 100%;
-    }
-
+    body>.header .top-header,
     body>.header .bottom-header {
-        position: absolute;
-        right: 0;
         width: 100%;
-        padding: 16px 10px 15px 15px;
-    }
-
-    body>.slider,
-    body>.header .search,
-    body>.header .quantity,
-    body>.header .cart-text,
-    body>.header .user-items,
-    body>.header .bottom-header .items,
-    body>.header .bottom-header .tiki-seller {
-        display: none;
+        height: 102px;
+        position: absolute;
+        padding: 8px 12px 0px;
     }
 
     body>.header .top-header .logo {
         position: absolute;
+        display: flex;
+        top: 0;
         left: 50%;
+        height: 66px;
+        align-items: center;
+        justify-content: center;
         transform: translateX(-50%);
     }
 
-    body>.header .header-data-user {
-        position: absolute;
-        right: 0;
+    body>.header .top-header .logo img {
+        width: 40px;
+        height: 27px;
     }
 
+    body>.header .top-header .header-data-user {
+        position: absolute;
+        top: 0;
+        display: flex;
+        height: 66px;
+        align-items: center;
+        justify-content: center;
+        right: 12px;
+    }
+
+    body>.header .search {
+        position: absolute;
+        bottom: 0;
+        left: 12px;
+        right: 12px;
+        height: 36px;
+        margin-bottom: 8px;
+    }
+
+    body>.slider {
+        display: none;
+    }
+
+    body>.header .search span {
+        display: none;
+    }
+
+    body>.header .search button {
+        position: absolute;
+        right: 0;
+        width: 50px;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 1);
+    }
+
+    body>.header .search input {
+        position: relative;
+        width: 100%;
+        height: 36px;
+    }
+
+    body>.header .bottom-header .logo {
+        position: absolute;
+        top: 36%;
+        transform: translateY(-36%);
+    }
+
+    body>.container .top-content .event {
+        display: none;
+    }
+
+    body>.container .top-content {
+        height: calc(-7.93162px + 33.0484vw);
+    }
+
+    body>.container .top-content .slides {
+        width: 100%;
+    }
+
+    body>.container .content-deal-and-reward .content-deal {
+        display: none;
+    }
+
+    .container .content-deal-and-reward {
+        width: calc(-24px + 100vw);
+        height: calc(-13.5057px + 56.2738vw);
+    }
+
+    .content-deal-and-reward .content-reward {
+        margin-left: 0;
+    }
+
+    .content-reward {
+        width: 100%;
+    }
+
+    .content-reward .reward-slider {
+        position: relative;
+        width: 100%;
+    }
+
+    body>.container .content-brand {
+        margin-top: 8px;
+        height: calc(30.2222vw);
+    }
+
+    body>.container .content-brand>div {
+        border-radius: 10px;
+    }
+
+    body>.container .content-brand picture {
+        display: none;
+    }
+
+    .container>.content .content-brand .middle {
+        width: calc(36.2667vw);
+        height: 90%;
+        background: url('https://salt.tikicdn.com/ts/banner/93/c7/d0/cf4989d548c597d0fdb0ae9390be827b.png') center/cover no-repeat;
+    }
+
+    .container>.content .content-brand .right,
+    .container>.content .content-brand .left {
+        width: calc(27.7333vw);
+        height: 80%;
+        margin-left: 10px;
+        margin-right: 10px;
+        background: url('https://salt.tikicdn.com/ts/banner/b3/3d/e5/5a6340fe8cb3a56f77ae4bf3a11e8169.png') center/cover no-repeat;
+    }
+
+    .container>.content .content-brand .box {
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        height: calc(8.53333vw);
+        border-radius: 12px 12px 0px 0px;
+        background: white none repeat scroll 0% 0%;
+    }
+}
+
+@media screen and (max-width: 1270px) {
     .container>.content {
         width: 100%;
     }
@@ -1195,4 +1345,10 @@ body>.header {
     .container .child-component {
         width: 100%;
     }
+
+    .footer .address,
+    .footer .infomation {
+        width: 100%;
+    }
+
 }

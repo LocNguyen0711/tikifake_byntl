@@ -51,7 +51,7 @@ const slideShow = (btnControl, dotItems, root, children, index, slideWidth, slid
         }
     }
     else if (btnControl === 'prev') {
-        if (index == 0) {
+        if (index === 0) {
             dotItems != 'none' ? dotItems.querySelector(`.dot${index}`).classList.remove('activeDot') : undefined
             index = slideLength;
             root.querySelectorAll(children).forEach((item) => {
@@ -104,13 +104,16 @@ dotItems1.querySelectorAll('span').forEach(item => {
 // End banner content script
 // Deal content script
 let countSlide2 = 0;
+const getWidth2 = () => {
+    return contentDeal.querySelector('.img').querySelector(img).offsetWidth;
+}
 contentDeal.querySelector('.icon.icon-next').addEventListener('click', () => {
     if (countSlide2 < 1) {
-        countSlide2 = slideShow('next', 'none', contendDealSlides, '.slide-item', countSlide2, 148, contendDealSlides.childElementCount - 1, 5)
+        countSlide2 = slideShow('next', 'none', contendDealSlides, '.slide-item', countSlide2, getWidth2(), contendDealSlides.childElementCount - 1, 5)
         contentDeal.querySelector('.icon.icon-prev').style.display = 'flex'
     }
     else if (countSlide2 = 1) {
-        countSlide2 = slideShow('next', 'none', contendDealSlides, '.slide-item', countSlide2, 148, contendDealSlides.childElementCount - 1, 6)
+        countSlide2 = slideShow('next', 'none', contendDealSlides, '.slide-item', countSlide2, getWidth2(), contendDealSlides.childElementCount - 1, 6)
         contentDeal.querySelector('.icon.icon-next').style.display = 'none'
     }
 })
@@ -127,19 +130,19 @@ contentDeal.querySelector('.icon.icon-prev').addEventListener('click', () => {
 })
 
 let countSlide3 = 0;
-const getWidth2 = () => {
+const getWidth3 = () => {
     return contentRewardSlides.querySelector('img').offsetWidth;
 }
 contentReward.querySelector('.dot.one').addEventListener('click', () => {
     if (countSlide3 === 1) {
-        countSlide3 = slideShow('prev', 'none', contentRewardSlides, '.slide-item', countSlide3, getWidth2(), contentRewardSlides.childElementCount - 1, 1)
+        countSlide3 = slideShow('prev', 'none', contentRewardSlides, '.slide-item', countSlide3, getWidth3(), contentRewardSlides.childElementCount - 1, 1)
         contentReward.querySelector('.dot.one').style.backgroundColor = "#ab9bfa"
         contentReward.querySelector('.dot.two').style.backgroundColor = "#402da1"
     }
 })
 contentReward.querySelector('.dot.two').addEventListener('click', () => {
     if (countSlide3 === 0) {
-        countSlide3 = slideShow('next', 'none', contentRewardSlides, '.slide-item', countSlide3, getWidth2(), contentRewardSlides.childElementCount - 1, 1)
+        countSlide3 = slideShow('next', 'none', contentRewardSlides, '.slide-item', countSlide3, getWidth3(), contentRewardSlides.childElementCount - 1, 1)
         contentReward.querySelector('.dot.two').style.backgroundColor = "#ab9bfa"
         contentReward.querySelector('.dot.one').style.backgroundColor = "#402da1"
     }
@@ -150,10 +153,10 @@ const authenticBrand = document.querySelector('.authentic-brand')
 const bannerSlider = authenticBrand.querySelector('.banner-slider')
 const dotItems2 = authenticBrand.querySelector('.dots')
 bannerSlider.parentElement.querySelector('.icon.icon-next').addEventListener('click', () => {
-    countSlide4 = slideShow('next', dotItems2, bannerSlider, '.slide-item', countSlide4, 612, bannerSlider.childElementCount - 3, 2)
+    countSlide4 = slideShow('next', dotItems2, bannerSlider, '.slide-item', countSlide4, 612, bannerSlider.childElementCount - 2, 2)
 })
 bannerSlider.parentElement.querySelector('.icon.icon-prev').addEventListener('click', () => {
-    countSlide4 = slideShow('prev', dotItems2, bannerSlider, '.slide-item', countSlide4, 612, bannerSlider.childElementCount - 3, 2)
+    countSlide4 = slideShow('prev', dotItems2, bannerSlider, '.slide-item', countSlide4, 612, bannerSlider.childElementCount - 2, 2)
 })
 dotItems2.querySelectorAll('span').forEach((item) => {
     item.addEventListener('click', () => {
