@@ -602,6 +602,7 @@ body>.header {
     width: max-content;
     display: flex;
     flex-direction: row;
+    overflow: scroll;
 }
 
 .content>.tab-container img {
@@ -620,6 +621,7 @@ body>.header {
 
 .content>.tab-container a {
     padding: 15px;
+    inline-size: max-content;
 }
 
 .banner-container {
@@ -960,6 +962,7 @@ body>.header {
     width: 100%;
     align-items: center;
     flex-direction: row;
+    overflow: scroll;
     background-color: #f5f5fa;
 }
 
