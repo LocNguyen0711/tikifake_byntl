@@ -458,7 +458,8 @@ body>.header {
     font-size: 10px;
     text-align: center;
     border-radius: 10px;
-    background-color: rgb(239, 153, 145);
+    justify-content: center;
+    background-color: rgb(255, 170, 175);
 }
 
 .deal-slider .status .just-opened {
@@ -469,7 +470,7 @@ body>.header {
     height: 100%;
     padding: 10px;
     border-radius: 50px;
-    background-color: rgb(251, 61, 43);
+    background-color: rgb(255, 66, 78);
 }
 
 .content-deal .icon.icon-prev,
@@ -592,24 +593,61 @@ body>.header {
     width: 800px;
 }
 
+.content>.tab-container .tabs .tab-item {
+    width: 103px;
+}
+
+.content>.tab-container .tabs .tab-item a {
+    width: 81px;
+    padding: 0;
+    font-size: 11px;
+    margin-top: 12px;
+    text-align: center;
+}
+
+.content>.mobile_tab-container .tabs .tab-item,
+.content>.mobile-gadget .tabs .tab-item {
+    width: 22vw;
+    padding: 0;
+}
+
+.content>.mobile_tab-container,
+.content>.mobile-gadget,
 .content>.tab-container {
-    justify-content: center;
+    justify-content: space-between;
     background-color: #fff;
 }
 
-.content>.tab-container .tabs {
-    position: relative;
-    width: max-content;
-    display: flex;
-    flex-direction: row;
+.content>.tab-container,
+.content>.mobile_tab-container {
     overflow: scroll;
 }
 
+.content>.mobile-gadget .body {
+    width: 100%;
+    overflow: scroll;
+}
+
+.content>.mobile_tab-container .tabs,
+.content>.mobile-gadget .tabs,
+.content>.tab-container .tabs {
+    position: relative;
+    width: 100%;
+    padding: 16px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.content>.mobile_tab-container img,
+.content>.mobile-gadget img,
 .content>.tab-container img {
     width: 48px;
     height: 48px;
 }
 
+.content>.mobile_tab-container .tab-item,
+.content>.mobile-gadget .tab-item,
 .content>.tab-container .tab-item {
     display: flex;
     font-size: 10px;
@@ -619,11 +657,97 @@ body>.header {
     flex-direction: column;
 }
 
+.content>.mobile_tab-container .tab-item a,
+.content>.mobile-gadget a,
 .content>.tab-container a {
     padding: 15px;
     inline-size: max-content;
 }
 
+.content>.mobile_tab-container {
+    display: none;
+}
+
+.content>.mobile-gadget {
+    display: none;
+    flex-direction: column;
+}
+
+.content>.mobile-gadget .header {
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: flex-start;
+}
+.content>.mobile_content-deal {
+    display: none;
+    width: 100%;
+}
+.content>.mobile_content-deal .content-deal {
+    width: 100%;
+}
+
+.content>.mobile_content-deal .body {
+    display: flex;
+    justify-content: row;
+}
+.content>.mobile_content-deal .content-deal .slide-item {
+    position: relative;
+    width: 80px;
+    padding: 0;
+    margin: 0px 8px 0px 0px;
+}
+.content>.mobile_content-deal .content-deal picture {
+    padding-top: 100%;
+    height: 100%;
+}
+.content>.mobile_content-deal .content-deal .slide-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.content>.mobile_content-deal .content-deal .price {
+    font-size: 10px;
+}
+.content>.mobile_content-deal .content-deal .sale-off {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    border-radius: 2px;
+    color: rgb(255, 66, 78);
+    box-shadow:  rgb(255, 66, 78) 0px 0px 0px .3px inset;
+    background: rgb(255, 240, 241) none repeat scroll 0% 0%;
+}
+.content>.mobile_content-deal .content-deal .status {
+    font-size: 8px;
+}
+.content>.mobile_content-deal .content-deal .just-opened {
+    padding: 8px
+}
+.content>.mobile_content-deal .content-deal .more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content>.mobile_content-deal .content-deal .more a{
+    display: flex;
+    font-size: 12px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.content>.mobile_content-deal .content-deal .more i {
+    color: #fff;
+    padding: 6px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: rgb(30, 129, 235);
+}
 .banner-container {
     padding: 15px 0;
     justify-content: center;
@@ -1234,6 +1358,7 @@ body>.header {
         left: 12px;
         right: 12px;
         height: 36px;
+        z-index: 1;
         margin-bottom: 8px;
     }
 
@@ -1337,6 +1462,23 @@ body>.header {
         height: calc(8.53333vw);
         border-radius: 12px 12px 0px 0px;
         background: white none repeat scroll 0% 0%;
+    }
+
+    .container>.content .mobile_tab-container,
+    .container>.content .mobile-gadget {
+        display: flex;
+    }
+
+    .content>.tab-container {
+        display: none;
+    }
+
+    .container>.content .mobile-gadget .tabs,
+    .container>.content .mobile_tab-container .tabs {
+        width: max-content;
+    }
+    .content>.mobile_content-deal {
+        display: flex;
     }
 }
 
