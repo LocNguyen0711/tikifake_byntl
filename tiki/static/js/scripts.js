@@ -101,6 +101,9 @@ dotItems1.querySelectorAll('span').forEach(item => {
         countSlide1 = slideShow('dot', dotItems1, SlidesBannerContent, '.slide-item', countSlide1, getWidth1(), SlidesBannerContent.childElementCount - 3, 1, item)
     })
 })
+setInterval(() => {
+    countSlide1 = slideShow('next', dotItems1, SlidesBannerContent, '.slide-item', countSlide1, getWidth1(), SlidesBannerContent.childElementCount - 3, 1)
+}, 3000)
 // End banner content script
 // Deal content script
 let countSlide2 = 0;
@@ -128,7 +131,6 @@ contentDeal.querySelector('.icon.icon-prev').addEventListener('click', () => {
         contentDeal.querySelector('.icon.icon-next').style.display = 'flex'
     }
 })
-
 let countSlide3 = 0;
 const getWidth3 = () => {
     return contentRewardSlides.querySelector('img').offsetWidth;
@@ -207,5 +209,21 @@ btnMoreProduct.addEventListener('click', () => {
         alert('Đã hết sản phẩm')
     }
 })
+const mobileContentBanner = document.querySelector('.mobile_content-banner')
+let countSlide6 = 0;
+const mBannerContainerSlider = mobileContentBanner.querySelector('.slides')
+const getWidth4 = () => {
+    return mBannerContainerSlider.querySelector('img').offsetWidth;
+}
+const mDotItems1 = mobileContentBanner.querySelector('.dots')
+mDotItems1.querySelectorAll('span').forEach((item) => {
+    item.addEventListener('click', () => {
+        countSlide6 = slideShow('dot', mDotItems1, mBannerContainerSlider, '.slide-item', countSlide6, getWidth4(), mBannerContainerSlider.childElementCount - 3, 2, item)
+    }
+    )
+})
+setInterval(() => {
+    countSlide6 = slideShow('next', mDotItems1, mBannerContainerSlider, '.slide-item', countSlide6, getWidth4(), mBannerContainerSlider.childElementCount - 3, 1)
+}, 5000)
 // End deal content script
 

@@ -317,7 +317,7 @@ body>.header {
     align-items: center;
     justify-content: center;
 }
-
+.mobile_content-banner .dots span,
 .container .top-content span {
     padding: 4px;
     margin: 0 2px;
@@ -645,7 +645,16 @@ body>.header {
     width: 48px;
     height: 48px;
 }
-
+.mobile_content-banner .dots {
+    position: absolute;
+    bottom: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    right: 0;
+    height: 10px;
+}
 .content>.mobile_tab-container .tab-item,
 .content>.mobile-gadget .tab-item,
 .content>.tab-container .tab-item {
@@ -666,6 +675,7 @@ body>.header {
 
 .content>.mobile_tab-container {
     display: none;
+    margin: 0;
 }
 
 .content>.mobile-gadget {
@@ -679,28 +689,45 @@ body>.header {
     display: flex;
     justify-content: flex-start;
 }
+
 .content>.mobile_content-deal {
     display: none;
     width: 100%;
 }
+
 .content>.mobile_content-deal .content-deal {
     width: 100%;
 }
 
+.content>.mobile_content-deal .content-deal .header .title img {
+    height: 21px;
+    width: max-content;
+}
+
+.content>.mobile_content-deal .content-deal .header .title {
+    white-space: break-spaces;
+    display: flex;
+
+}
+
 .content>.mobile_content-deal .body {
     display: flex;
+    overflow: scroll;
     justify-content: row;
 }
+
 .content>.mobile_content-deal .content-deal .slide-item {
     position: relative;
     width: 80px;
     padding: 0;
     margin: 0px 8px 0px 0px;
 }
+
 .content>.mobile_content-deal .content-deal picture {
     padding-top: 100%;
     height: 100%;
 }
+
 .content>.mobile_content-deal .content-deal .slide-item img {
     position: absolute;
     top: 0;
@@ -709,9 +736,11 @@ body>.header {
     height: 100%;
     object-fit: contain;
 }
+
 .content>.mobile_content-deal .content-deal .price {
     font-size: 10px;
 }
+
 .content>.mobile_content-deal .content-deal .sale-off {
     position: absolute;
     top: 0;
@@ -719,27 +748,32 @@ body>.header {
     margin: 0;
     border-radius: 2px;
     color: rgb(255, 66, 78);
-    box-shadow:  rgb(255, 66, 78) 0px 0px 0px .3px inset;
+    box-shadow: rgb(255, 66, 78) 0px 0px 0px .3px inset;
     background: rgb(255, 240, 241) none repeat scroll 0% 0%;
 }
+
 .content>.mobile_content-deal .content-deal .status {
     font-size: 8px;
 }
+
 .content>.mobile_content-deal .content-deal .just-opened {
     padding: 8px
 }
+
 .content>.mobile_content-deal .content-deal .more {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.content>.mobile_content-deal .content-deal .more a{
+
+.content>.mobile_content-deal .content-deal .more a {
     display: flex;
     font-size: 12px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+
 .content>.mobile_content-deal .content-deal .more i {
     color: #fff;
     padding: 6px;
@@ -748,6 +782,7 @@ body>.header {
     border-radius: 50%;
     background-color: rgb(30, 129, 235);
 }
+
 .banner-container {
     padding: 15px 0;
     justify-content: center;
@@ -1213,6 +1248,48 @@ body>.header {
     display: none;
 }
 
+.mobile_content-banner {
+    height: 100%;
+    display: none;
+    flex-direction: column;
+}
+.mobile_content-banner .header {
+    display: flex;
+    width: 100%;
+    padding: 10px 0;
+    justify-content: flex-start;
+}
+.mobile_content-banner .content {
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    overflow: hidden;
+}
+.mobile_content-banner .title {
+    font-size: 10px;
+    width: 100%;
+    display: flex;
+    padding: 5px 0;
+    background-color: rgba(26, 148, 255, .2);
+    justify-content: center;
+}
+.mobile_content-banner .slides {
+    width: calc(100%*11);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+}
+.mobile_content-banner .slides .slide-item {
+    width: 100%;
+    height: 100%;
+}
+.mobile_content-banner .slides img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
 .footer {
     display: flex;
     width: 100%;
@@ -1477,7 +1554,11 @@ body>.header {
     .container>.content .mobile_tab-container .tabs {
         width: max-content;
     }
+
     .content>.mobile_content-deal {
+        display: flex;
+    }
+    .content>.mobile_content-banner {
         display: flex;
     }
 }
