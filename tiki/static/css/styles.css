@@ -317,6 +317,7 @@ body>.header {
     align-items: center;
     justify-content: center;
 }
+
 .mobile_content-banner .dots span,
 .container .top-content span {
     padding: 4px;
@@ -607,8 +608,14 @@ body>.header {
 
 .content>.mobile_tab-container .tabs .tab-item,
 .content>.mobile-gadget .tabs .tab-item {
-    width: 22vw;
     padding: 0;
+    width: 22vw;
+}
+
+.content>.mobile_tab-container .tabs .tab-item a,
+.content>.mobile-gadget .tabs .tab-item a {
+    width: 100%;
+    text-align: center;
 }
 
 .content>.mobile_tab-container,
@@ -645,6 +652,7 @@ body>.header {
     width: 48px;
     height: 48px;
 }
+
 .mobile_content-banner .dots {
     position: absolute;
     bottom: 10%;
@@ -655,6 +663,7 @@ body>.header {
     right: 0;
     height: 10px;
 }
+
 .content>.mobile_tab-container .tab-item,
 .content>.mobile-gadget .tab-item,
 .content>.tab-container .tab-item {
@@ -1253,18 +1262,21 @@ body>.header {
     display: none;
     flex-direction: column;
 }
+
 .mobile_content-banner .header {
     display: flex;
     width: 100%;
     padding: 10px 0;
     justify-content: flex-start;
 }
+
 .mobile_content-banner .content {
     width: 100%;
     height: 100%;
     font-size: 12px;
     overflow: hidden;
 }
+
 .mobile_content-banner .title {
     font-size: 10px;
     width: 100%;
@@ -1273,6 +1285,7 @@ body>.header {
     background-color: rgba(26, 148, 255, .2);
     justify-content: center;
 }
+
 .mobile_content-banner .slides {
     width: calc(100%*11);
     height: 100%;
@@ -1281,15 +1294,22 @@ body>.header {
     align-content: center;
     flex-direction: row;
 }
+
 .mobile_content-banner .slides .slide-item {
     width: 100%;
     height: 100%;
 }
+
 .mobile_content-banner .slides img {
     width: 100%;
     height: 100%;
     border-radius: 10px;
 }
+
+.mobile_content-feature-item {
+    display: none;
+}
+
 .footer {
     display: flex;
     width: 100%;
@@ -1373,12 +1393,48 @@ body>.header {
     justify-content: center;
 }
 
+.home-bottom-navigation {
+    display: none;
+}
+
+.home-bottom-navigation>a {
+    width: 64px;
+    padding-top: 5px;
+    text-align: center;
+    padding-bottom: 6px;
+
+}
+
+.home-bottom-navigation img {
+    width: 24px;
+    height: 100%;
+    display: block;
+    padding-bottom: 4px;
+}
+
+.home-bottom-navigation picture {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.home-bottom-navigation>a>div {
+    display: flex;
+    font-size: 10px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
 /* End Container */
 /* Animations */
 
 /* Responsive */
 @media screen and (max-width: 1240px) {
 
+    body>.container .banner-container,
+    .authentication-container,
+    .banner-content02,
     body>.header .top-header .user-account .user-items,
     body>.header .top-header .cart-text,
     body>.header .top-header .user-cart .quantity,
@@ -1558,8 +1614,65 @@ body>.header {
     .content>.mobile_content-deal {
         display: flex;
     }
+
     .content>.mobile_content-banner {
         display: flex;
+    }
+
+    .mobile_content-feature-item .title {
+        font-size: 2.5vw;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background-color: rgba(26, 148, 255, .3);
+    }
+
+    .mobile_content-feature-item .title,
+    .mobile_content-feature-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobile_content-feature-item .right,
+    .mobile_content-feature-item .left {
+        width: calc(100%/2);
+        height: 100%;
+    }
+
+    .mobile_content-feature-item .right {
+        padding-left: 4px;
+    }
+
+    .mobile_content-feature-item .left {
+        padding-right: 4px;
+    }
+
+    .mobile_content-feature-item img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .mobile_content-feature-item {
+        display: flex;
+    }
+
+    .recommend-today .product-item {
+        width: calc(100%/2);
+    }
+
+    .footer {
+        display: none;
+    }
+
+    .home-bottom-navigation {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
     }
 }
 
