@@ -1717,6 +1717,10 @@ body>.header {
         align-items: center;
         justify-content: space-between;
     }
+    .home-bottom-navigation .cateIsActivated,
+    .home-bottom-navigation .homeIsDisabled {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 1270px) {

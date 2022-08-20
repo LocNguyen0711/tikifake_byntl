@@ -200,8 +200,8 @@ const btnMoreProduct = document.querySelector('.recommend-today').querySelector(
 countMoreProduct = 0;
 btnMoreProduct.addEventListener('click', () => {
     countMoreProduct += 1;
-    if (moreProductItems[countMoreProduct-1]) {
-        document.querySelector('.recommend-today').querySelectorAll(moreProductItems[countMoreProduct-1]).forEach((item) => {
+    if (moreProductItems[countMoreProduct - 1]) {
+        document.querySelector('.recommend-today').querySelectorAll(moreProductItems[countMoreProduct - 1]).forEach((item) => {
             item.style.display = 'flex'
         })
     }
@@ -226,4 +226,18 @@ setInterval(() => {
     countSlide6 = slideShow('next', mDotItems1, mBannerContainerSlider, '.slide-item', countSlide6, getWidth4(), mBannerContainerSlider.childElementCount - 3, 1)
 }, 5000)
 // End deal content script
-
+// Mobile content script
+const btnHome = document.querySelector('.home-bottom-navigation').querySelector('.homeBtn')
+btnHome.addEventListener('click', () => {
+    document.querySelector('.home-bottom-navigation').querySelector('.homeIsActivated').style.display = 'block'
+    document.querySelector('.home-bottom-navigation').querySelector('.homeIsDisabled').style.display = 'none'
+    document.querySelector('.home-bottom-navigation').querySelector('.cateIsActivated').style.display = 'none'
+    document.querySelector('.home-bottom-navigation').querySelector('.cateIsDisabled').style.display = 'block'
+})
+const btnCate = document.querySelector('.home-bottom-navigation').querySelector('.cateBtn')
+btnCate.addEventListener('click', () => {
+    document.querySelector('.home-bottom-navigation').querySelector('.homeIsActivated').style.display = 'none'
+    document.querySelector('.home-bottom-navigation').querySelector('.cateIsDisabled').style.display = 'none'
+    document.querySelector('.home-bottom-navigation').querySelector('.cateIsActivated').style.display = 'block'
+    document.querySelector('.home-bottom-navigation').querySelector('.homeIsDisabled').style.display = 'block'
+})
