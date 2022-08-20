@@ -1032,6 +1032,14 @@ body>.header {
     flex-direction: column;
 }
 
+.featured-category .top>div,
+.featured-category .bottom>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .featured-category img {
     width: 60px;
     height: 60px;
