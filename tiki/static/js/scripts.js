@@ -103,12 +103,12 @@ dotItems1.querySelectorAll('span').forEach(item => {
 })
 setInterval(() => {
     countSlide1 = slideShow('next', dotItems1, SlidesBannerContent, '.slide-item', countSlide1, getWidth1(), SlidesBannerContent.childElementCount - 3, 1)
-}, 3000)
+}, 7000)
 // End banner content script
 // Deal content script
 let countSlide2 = 0;
 const getWidth2 = () => {
-    return contentDeal.querySelector('.img').querySelector(img).offsetWidth;
+    return contentDeal.querySelector('.slide-item').offsetWidth;
 }
 contentDeal.querySelector('.icon.icon-next').addEventListener('click', () => {
     if (countSlide2 < 1) {
@@ -224,7 +224,7 @@ mDotItems1.querySelectorAll('span').forEach((item) => {
 })
 setInterval(() => {
     countSlide6 = slideShow('next', mDotItems1, mBannerContainerSlider, '.slide-item', countSlide6, getWidth4(), mBannerContainerSlider.childElementCount - 3, 1)
-}, 5000)
+}, 7000)
 // End deal content script
 // Mobile content script
 const btnHome = document.querySelector('.home-bottom-navigation').querySelector('.homeBtn')

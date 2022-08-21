@@ -356,6 +356,7 @@ body>.header {
 .content-deal .header .time-countdown {
     display: flex;
     align-items: center;
+    font-size: 2vw;
     margin: 0 10px;
     flex-direction: row;
 }
@@ -674,7 +675,7 @@ body>.header {
 .content>.mobile-gadget .tab-item,
 .content>.tab-container .tab-item {
     display: flex;
-    font-size: 10px;
+    font-size: 2vw;
     padding-top: 15px;
     align-items: center;
     justify-self: center;
